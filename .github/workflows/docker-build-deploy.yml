@@ -1,12 +1,11 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Python application
+name: Docker Build And Deploy
 
 on:
   push:
     tags:
       - '*'
+    branch:
+      - 'feature/ci-1'
 
 jobs:
   build:
@@ -28,5 +27,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: pingbot_${{steps.tag.outputs.tag}}
-        labels: version="${{steps.tag.outputs.tag}}"
+        tags: pingbot_1.0.0
+        labels: version="1.0.0"
+        #tags: pingbot_${{steps.tag.outputs.tag}}
+        #labels: version="${{steps.tag.outputs.tag}}"
