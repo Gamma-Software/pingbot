@@ -5,7 +5,7 @@ on:
     tags:
       - '*'
     branches:
-      - '*'
+      - "feature/ci-1"
 
 jobs:
   build:
