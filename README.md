@@ -13,4 +13,4 @@ Follow the Telegram bot creation page to create your own [bot](https://core.tele
 ## Configuration
 You need to create two environment variables. This can be done as such
 
-docker run --env BOT_TOKEN=<BOT_TOKEN> --env BOT_ID=<BOT_ID> valentinrudloff/pingbot:latest <ip_adress_to_monitor>
+docker run -d --env BOT_TOKEN=<BOT_TOKEN> --env BOT_ID=<BOT_ID> --restart unless-stopped valentinrudloff/pingbot:v1.0.0 <ip_adress_to_monitor>
