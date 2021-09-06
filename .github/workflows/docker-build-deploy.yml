@@ -4,8 +4,7 @@ on:
   push:
     tags:
       - '*'
-    branch:
-      - 'feature/ci-1'
+    branches: [ feature/ci-1 ]
 
 jobs:
   build:
