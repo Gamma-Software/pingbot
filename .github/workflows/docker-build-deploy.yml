@@ -17,3 +17,10 @@ jobs:
     - name: Build Docker image
       run: |
         docker build . --tag ${{ env.RELEASE_VERSION }}
+
+    - name: Docker Login
+      env :
+        USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: |
+        docker login -u $USERNAME -p $PASSWORD
