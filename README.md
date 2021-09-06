@@ -1,4 +1,4 @@
-[docker pull](https://img.shields.io/docker/pulls/valentinrudloff/pingbot.svg)
+![docker pull](https://img.shields.io/docker/pulls/valentinrudloff/pingbot.svg)
 
 # PingBot
 Deploy and Run quickly a ping bot (with Telegram) to monitor the connection with a IoT device
